@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 4.375em;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+nav ul {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #183b58;
+  height: 100vh;
+  padding-top: 5em;
+  z-index: 100;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 1em;
+  display: block;
+}
+
+.exit a {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.open-nav {
+  visibility: unset;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.tour-hero {
+  background: url("images/background.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.wrapper {
+  padding: 0.5em;
+  text-align: center;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.subtitle {
+  padding: 3em 0 0.5em;
+}
+
+h1 span {
+  font-size: 52px;
+  display: block;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.cta {
+  display: inline-block;
+  padding: 1em;
+  background: #183b58;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 3em;
+  margin-top: 1em;
+}
+
+ul.featured-tours {
+  width: 60%;
+  margin: 0 auto;
+}
+
+ul.featured-tours li {
+  margin-bottom: 3em;
+}
+
+.tour-img {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tour-title {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.tour-desc,
+ul.features li p,
+.left p {
+  line-height: 1.9em;
+  font-size: 0.8em;
+  margin-bottom: 2em;
+}
+
+.tour-cta {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.tour-cta:after {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  background: white;
+  width: 100%;
+  height: 1px;
+}
+
+.tour-cta span {
+  color: white;
+  font-weight: bold;
+}
+
+.tour-cta img {
+  width: 10px;
+}
+
+/* mobile-first approach */
+
+@media (min-width: 550px) {
+  .menu,
+  .exit {
+    display: none;
+  }
+
+  header {
+    padding: 2em 4.375em;
+  }
+
+  ul.nav {
+    visibility: unset;
+    opacity: 1;
+    background: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: unset;
+    height: auto;
+  }
+
+  ul.nav li a {
+    font-size: 0.9em;
+    padding: 0 1em;
+    font-weight: normal;
+  }
+
+  ul.nav li:last-child a {
+    padding-right: 0;
+  }
+
+  ul.nav .active a {
+    font-weight: bold;
+  }
+
+  ul.nav .res a {
+    color: #183b58;
+    font-weight: bold;
+  }
+
+  ul.featured-tours {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 3em;
+  }
+}
+
+@media (min-width: 900px) {
+  .wrapper {
+    text-align: left;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .hero {
+    padding: 7em 4.375em;
+  }
+
+  .main-copy {
+    width: 40%;
+  }
+
+  p.subtitle {
+    margin: 0 0 1em;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-top: 0;
+  }
+
+  ul.featured-tours {
+    width: 70%;
+  }
+}
